@@ -126,11 +126,21 @@ STATIC_URL = '/static/'
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.line.LineOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+
     'django.contrib.auth.backends.ModelBackend',
 ]
 
 SOCIAL_AUTH_TWITTER_KEY = SOCIAL_AUTH_TWITTER_KEY
 SOCIAL_AUTH_TWITTER_SECRET = SOCIAL_AUTH_TWITTER_SECRET
+
+SOCIAL_AUTH_LINE_KEY = '1656289849'
+SOCIAL_AUTH_LINE_SECRET = '25262dd329ec8d6391c2b0218f1d5780'
+
+SOCIAL_AUTH_FACEBOOK_KEY = "1903624466464382"
+SOCIAL_AUTH_FACEBOOK_SECRET = "7001c04fa51558ee699fa8b28ce9d578"
+
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/twitterManager/top'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
